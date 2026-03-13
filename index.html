@@ -15,11 +15,15 @@
     />
 
     <link rel="stylesheet" href="style/index.css" />
-    <title>Site Copiado|Sport Club Internacional</title>
+    <title>Site Copiado | Sport Club Internacional</title>
   </head>
   <body>
     <header>
       <a href="#"><img src="assets/scinternacional.svg" alt="" /></a>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
 
       <nav>
         <ul class="menu">
@@ -206,6 +210,13 @@
       </div>
     </main>
 
-    
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

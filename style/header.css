@@ -10,6 +10,7 @@ header {
   justify-content: space-between;
   font-size: 10px;
   font-weight: 600;
+  z-index: 9999;
 
   img {
     width: 180px;
@@ -26,7 +27,7 @@ header {
     }
 
     .menu-item {
-      position: relative; /* importante para dropdown */
+      position: relative;
     }
 
     .menu-item a {
@@ -41,17 +42,17 @@ header {
       color: var(--color-red);
     }
 
-    /* Submenu escondido por padrão */
     .submenu {
       list-style: none;
       position: absolute;
-      top: 100%; /* logo abaixo do li pai */
+      top: 100%;
       left: 0;
       background-color: var(--color-red);
       border-radius: 6px;
       font-size: 10px;
       min-width: 180px;
       visibility: hidden;
+      opacity: 0;
       transition: opacity 0.3s ease;
       z-index: 10;
     }
@@ -59,18 +60,15 @@ header {
     .submenu li a {
       padding: 10px 15px;
       color: var(--color-white);
-      transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+      transition: background-color 0.2s ease;
     }
 
     .submenu li a:hover {
-        background-color: var(--color-red-dark);
-        color: white;
-        border-radius: 6px;
+      background-color: var(--color-red-dark);
+      color: white;
+      border-radius: 6px;
     }
 
-    /* Mostrar submenu ao passar o mouse */
     .menu-item:hover .submenu {
       opacity: 1;
       visibility: visible;
@@ -88,7 +86,7 @@ header {
     height: 36px;
     border-radius: 120px;
     border: none;
-    padding: 8px 30px 8px 16px; /* espaço para o ícone */
+    padding: 8px 30px 8px 16px;
     box-sizing: border-box;
     color: var(--color-black);
     box-shadow: var(--shadow-mid);
@@ -115,8 +113,6 @@ header {
     margin-right: 2rem;
   }
 
-  
-
   .far.fa-user {
     font-size: 16px;
     color: var(--color-red);
@@ -139,5 +135,91 @@ header {
 
   .profile:hover {
     transform: scale(1.05);
+  }
+
+  /* botão hamburguer (escondido no desktop) */
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-red);
+  }
+}
+
+/* -------- TABLET -------- */
+
+@media (max-width: 1024px) {
+  header img {
+    width: 140px;
+    height: auto;
+  }
+
+  header .search-container {
+    width: 130px;
+  }
+}
+
+/* -------- MOBILE -------- */
+
+@media (max-width: 768px) {
+  header {
+    padding: 8px 16px;
+  }
+
+  header nav .menu {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 72px);
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    box-shadow: var(--shadow-mid);
+    padding: 20px;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+  }
+
+  header nav .menu li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  header nav .menu li a {
+    padding: 16px ;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  header nav .menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  header .search-container {
+    display: none;
+  }
+
+  header .Buttons {
+    display: none;
+  }
+
+  header .menu-toggle {
+    display: block;
+    font-size: 26px;
+  }
+  .menu-toggle {
+    transition: transform 0.2s ease;
+  }
+
+  .menu-toggle:hover {
+    transform: scale(1.1);
   }
 }

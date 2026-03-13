@@ -2,14 +2,15 @@
   padding: 56px;
   background-image: url("../assets/fullbanner.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .carousel {
   max-width: 1300px;
   margin: auto;
   min-height: 400px;
-  width: max-content;
-  margin-top: 64px;
+  width: 100%;
+  margin-top: 72px;
 
   img {
     width: 100%;
@@ -24,6 +25,7 @@
   gap: 16px;
   position: relative;
   top: -30px;
+  flex-wrap: wrap; /* permite quebrar linha */
 }
 
 .card {
@@ -41,7 +43,6 @@
 
   .Tag {
     background-color: var(--color-grey-light);
-
     border-radius: 50px;
     font-size: 10px;
     font-family: "Montserrat";
@@ -105,17 +106,75 @@
   img {
     width: 80px;
     height: 80px;
-    transition:
-      transform 0.5s ease;
-      
+    transition: transform 0.5s ease;
   }
 
   img:hover {
     transform: scale(1.1);
-    
-    
   }
-  
+}
 
-  
+/* ----------- TABLET ----------- */
+
+@media (max-width: 1024px) {
+
+  .home_fullBanner {
+    padding: 32px;
+  }
+
+  .cards {
+    top: -20px;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+}
+
+/* ----------- CELULAR ----------- */
+
+@media (max-width: 768px) {
+
+  .carousel {
+    min-height: auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;
+    padding: 24px;
+  }
+
+}
+
+/* ----------- CELULAR PEQUENO ----------- */
+
+@media (max-width: 480px) {
+
+  .home_fullBanner {
+    padding: 20px;
+  }
+
+  .card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card h3 {
+    font-size: 13px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
 }
