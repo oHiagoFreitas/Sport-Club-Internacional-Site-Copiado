@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary: #DC0714;
+    --color-red: #DC0714;
+    --color-red-darkest: #6f2828;
+    --color-red-dark: #C00712;
+    --color-red-light: #FF4B56;
+    --color-red-lightest: #eeddde;
+    --color-golden: #463d2a;
+    --color-orange: #d96a3a;
+    --color-orange-lightest: #f3ece8;
+    --color-yellow: #c58515;
+    --color-yellow-lightest: #f4efe7;
+    --color-green: #2d793d;
+    --color-green-lightest: #ebf4ef;
+    --color-black: #261B1C;
+    --color-black-mid: #3B2427;
+    --color-black-light: #65383E;
+    --color-grey-dark: #333333;
+    --color-grey-darkest: #2c2c2c;
+    --color-grey: #999999;
+    --color-grey-mid: #666666;
+    --color-grey-light: #e9e9e9;
+    --color-grey-lightest: #f1f1f1;
+    --color-white: #ffffff;
+    --color-yellow-lightest: #fbf9f2;
+    --radius-max: 40px;
+    --radius-large: 24px;
+    --radius-mid: 16px;
+    --radius-small: 8px;
+    --radius-min: 4px;
+    --shadow-large: 0 0 80px rgba(0, 0, 0, 0.2);
+    --shadow-mid: 0 0 40px rgba(0, 0, 0, 0.2);
+    --shadow-small: 0 0 10px rgba(0, 0, 0, 0.1);
+    --shadow-min: 0 2px 16px rgba(0, 0, 0, 0.2);
+    --transition: 0.5s;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,167 @@
+header {
+  background-color: var(--color-white);
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  box-shadow: var(--shadow-mid);
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 600;
+
+  img {
+    width: 180px;
+    height: 60px;
+  }
+
+  nav {
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .menu-item {
+      position: relative; /* importante para dropdown */
+    }
+
+    .menu-item a {
+      text-decoration: none;
+      color: var(--color-black);
+      padding: 8px 0;
+      display: block;
+      transition: color 0.2s ease;
+    }
+
+    .menu-item a:hover {
+      color: var(--color-red);
+    }
+
+    /* Submenu escondido por padrão */
+    .submenu {
+      list-style: none;
+      position: absolute;
+      top: 100%; /* logo abaixo do li pai */
+      left: 0;
+      background-color: var(--color-red);
+      border-radius: 6px;
+      font-size: 10px;
+      min-width: 180px;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+    }
+
+    .submenu li a {
+      padding: 10px 15px;
+      color: var(--color-white);
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .submenu li a:hover {
+        background-color: var(--color-red-dark);
+        color: white;
+        border-radius: 6px;
+    }
+
+    /* Mostrar submenu ao passar o mouse */
+    .menu-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .search-container {
+    position: relative;
+    width: 160px;
+    font-size: 16px;
+  }
+
+  .search-container input {
+    width: 100%;
+    height: 36px;
+    border-radius: 120px;
+    border: none;
+    padding: 8px 30px 8px 16px; /* espaço para o ícone */
+    box-sizing: border-box;
+    color: var(--color-black);
+    box-shadow: var(--shadow-mid);
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .search-container input:focus {
+    outline: none;
+  }
+
+  .search-container i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-red);
+  }
+
+  .Buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 2rem;
+  }
+
+  button {
+    font-size: 10px;
+    width: fit-content;
+    height: 40px;
+    padding: 10px 24px;
+    color: var(--color-white);
+    background-color: var(--color-red);
+    border: none;
+    border-radius: var(--radius-min);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      text-shadow 0.2s ease;
+  }
+
+  button:hover {
+    box-shadow: 0 0 8px var(--color-red); /* x-offset y-offset blur color */
+    text-shadow: 0 0 4px var(--color-white); /* x-offset y-offset blur color */
+    transform: scale(1.1);
+  }
+
+  .far.fa-user {
+    font-size: 16px;
+    color: var(--color-red);
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+
+    a {
+      text-decoration: none;
+      color: var(--color-red);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+    }
+  }
+
+  .profile:hover {
+    transform: scale(1.05);
+  }
+}
