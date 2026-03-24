@@ -1,0 +1,38 @@
+#Gallery {
+  .container {
+    max-width: 1250px;
+    margin: auto;
+  }
+
+  .ForImage{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .imagemWidth{
+        img{
+            width: 300px;
+            height: auto;
+        }
+    }
+
+    .imagemWidth2{
+        img{
+            width: 310px;
+            height: auto;
+        }
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+
+
