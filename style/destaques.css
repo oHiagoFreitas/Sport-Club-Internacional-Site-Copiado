@@ -49,54 +49,70 @@
 
   .hover {
     transition: transform 0.5s ease;
+    position: relative;
   }
 
   .hover:hover {
     transform: scale(1.03);
   }
 
-  .TwoDest{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 1130px;
-    margin: auto;
-    margin-top: 20px;
-    gap: 20px;
-    position: relative;
-    
-    
+  .TwoDest {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1130px;
+  margin: auto;
+  margin-top: 20px;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 20px;
+  
 
-    img{
-        width: 550px;
-        height: auto;
-        border-radius: 20px 20px 0 0;
+  .hover {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    transition: transform 0.5s ease;
+  }
+
+  .hover:hover {
+    transform: scale(1.03);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 10px 10px;
+    display: block;
+  }
+
+  .legends {
+    position: absolute;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-mid);
+    width: 100%;
+    min-height: 70px;
+    height: auto; 
+    border-radius: 0 0 20px 20px;
+    bottom: -10px;
+    padding: 18px 30px;
+    box-sizing: border-box;
+
+    h2 {
+      font-size: 14px;
+      color: var(--color-black);
+      font-weight: 800;
+      margin-top: 5px;
+      font-family: var(--font-fm);
+      line-height: 1.3;
     }
 
-    .legends{
-        position: absolute;
-        background-color: var(--color-white);
-        box-shadow: var(--shadow-mid);
-        width: 550px;
-        height: 70px;
-        border-radius: 0 0 20px 20px;
-        bottom: -10px;
-        padding: 18px 30px;
-
-        h2{
-            font-size: 16px;
-            color: var(--color-black);
-            font-weight: 800;
-            margin-top: 5px;
-            font-family: var(--font-fm);
-        }
-
-        h4{
-            color: var(--color-red);
-            font-size: 16px;
-            font-weight: 800;
-            font-family: var(--font-fm);
-        }
+    h4 {
+      color: var(--color-red);
+      font-size: 13px;
+      font-weight: 800;
+      font-family: var(--font-fm);
     }
   }
+}
 }
