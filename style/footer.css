@@ -1,0 +1,126 @@
+footer {
+  padding: 40px;
+  background-color: var(--color-red);
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+  }
+
+  #patrocinadores,
+  #parceiros {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 40px;
+
+    h3 {
+      color: var(--color-white);
+      font-size: 15px;
+      font-family: var(--font-fm);
+    }
+
+    img {
+      width: 70px;
+      height: auto;
+    }
+  }
+
+  hr {
+    border: none;
+    height: 0.7px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    );
+    margin: 10px 0; /* mais espaço */
+  }
+
+  .RolagemLateral {
+    margin-top: 70px;
+    gap: 55px;
+    
+  }
+
+  h4 {
+    font-size: 12px;
+    font-family: var(--font-fm);
+    color: var(--color-white);
+  }
+
+  li {
+    list-style: none;
+    font-size: 10px;
+    font-family: var(--font-fm);
+    color: var(--color-white);
+    font-weight: 700;
+    margin-top: 30px;
+  }
+
+  li a {
+    text-decoration: none;
+    font-family: var(--font-fm);
+    color: var(--color-white);
+  }
+
+  p{
+    margin-top: 100px;
+    font-size: 14px;
+    color: var(--color-white);
+    font-family: var(--font-fm);
+    text-align: center;
+  }
+
+  .termos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+
+    a{
+        color: var(--color-white);
+        font-size: 13px;
+    }
+  }
+
+  .Redes{
+    margin-top: 40px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+        border: 2px solid var(--color-white);
+        padding: 10px;
+        border-radius: 50%;
+    }
+    img{
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+  }
+}
