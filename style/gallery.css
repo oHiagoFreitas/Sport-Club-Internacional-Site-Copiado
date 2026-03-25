@@ -4,6 +4,15 @@
     margin: auto;
   }
 
+  .hover {
+    transition: transform 0.5s ease;
+    position: relative;
+  }
+
+  .hover:hover {
+    transform: scale(1.03);
+  }
+
   .ForImage {
     margin-top: 50px;
     display: flex;
