@@ -114,7 +114,8 @@
   }
 }
 
-#gurias, #celeiro{
+#gurias,
+#celeiro {
   padding-top: 50px;
 
   .container {
@@ -138,17 +139,111 @@
   }
 
   .card {
-  width: 24%;
-  margin-bottom: 50px;
-}
+    width: 24%;
+    margin-bottom: 50px;
+  }
 }
 
+#Vdestaques {
+  padding: 120px 0px 120px 0px;
+  background-color: var(--color-black-light);
 
+  .hover {
+    transition: transform 0.5s ease;
+    position: relative;
+  }
+
+  .hover:hover {
+    transform: scale(1.03);
+  }
+
+  .container {
+    max-width: 87%;
+  }
+
+  h2 {
+    color: var(--color-white);
+  }
+
+  .RolagemLateral {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+  }
+
+  img {
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+  }
+
+  .Videos {
+    border-radius: 20px;
+    margin-top: 50px;
+    background-color: var(--color-white);
+    width: 20%;
+    height: auto;
+    display: flex; /* 👈 */
+    flex-direction: column; /* 👈 */
+    align-items: center;
+  }
+
+  .leg {
+    padding: 20px;
+    width: 90%;
+
+    h2 {
+      color: var(--color-red);
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 24px;
+      font-family: var(--font-fm);
+    }
+
+    h4 {
+      color: var(--color-black);
+      font-weight: 800;
+      font-size: 13px;
+      font-family: var(--font-fm);
+    }
+  }
+
+  .exclusivos {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    text-align: right;
+    gap: 20px;
+
+    button {
+      font-size: 12px;
+    }
+    p {
+      color: var(--color-white);
+      font-size: 13px;
+      font-family: var(--font-fm);
+    }
+  }
+}
+
+#conquistas {
+  padding: 120px 0px 120px 0px;
+  background-color: var(--color-red);
+
+  .container {
+    max-width: 87%;
+  }
+
+  h2{
+    color: var(--color-white);
+  }
+}
 
 /* ----------- TABLET ----------- */
 
 @media (max-width: 1024px) {
-
   .home_fullBanner {
     padding: 32px;
   }
@@ -160,13 +255,11 @@
   .card {
     width: 30%;
   }
-
 }
 
 /* ----------- CELULAR ----------- */
 
 @media (max-width: 768px) {
-
   .carousel {
     min-height: auto;
     margin-top: 60px;
@@ -184,15 +277,11 @@
     width: 90%;
     padding: 24px;
   }
-
 }
-
-
 
 /* ----------- CELULAR PEQUENO ----------- */
 
 @media (max-width: 480px) {
-
   .home_fullBanner {
     padding: 20px;
   }
@@ -209,5 +298,4 @@
   .card p {
     font-size: 12px;
   }
-
 }
