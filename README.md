@@ -37,7 +37,7 @@ O site original pode ser acessado aqui:
 
 ## 📷 Preview do projeto
 
-*(adicione aqui um print do seu site depois)*
+(https://ohiagofreitas.github.io/Sport-Club-Internacional-Site-Copiado/)
 
 ---
 
